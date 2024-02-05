@@ -1,5 +1,15 @@
 import random
+import tkinter
 
+hangman_art = [
+    "   +---+\n   |   |\n       |\n       |\n       |\n       |\n=========",
+    "   +---+\n   |   |\n   O   |\n       |\n       |\n       |\n=========",
+    "   +---+\n   |   |\n   O   |\n   |   |\n       |\n       |\n=========",
+    "   +---+\n   |   |\n   O   |\n  /|   |\n       |\n       |\n=========",
+    "   +---+\n   |   |\n   O   |\n  /|\\  |\n       |\n       |\n=========",
+    "   +---+\n   |   |\n   O   |\n  /|\\  |\n  /    |\n       |\n=========",
+    "   +---+\n   |   |\n   O   |\n  /|\\  |\n  / \\  |\n       |\n========="
+]
 my_datei = open("Hangman_words.txt","r",encoding="UTF8")
 int_Rows_datei = 0
 Underscore_String = []
@@ -7,29 +17,36 @@ eingegebene_Buchstaben = []
 correct_guess = 0
 max_versuche = 12
 int_versuche = 0
-
 data = my_datei.read().splitlines()
+GUI = tk.Tk()
+GUI.title("Hangman")
+Hangman_Label = tk.Label(GUI, font=("CourierK", 16))
+Hangman_Label.grid(row=0, collumn=0)
+
+
+def Choose_Word(int_Rows_datei):
+    Random_int = (random.randint(0,int_Rows_datei))
+    Random_int = Random_int  - 1
+    Hangman_Word = data[Random_int]
+    Hangman_Word = Hangman_Word.lower()
 
 for x in data:
     int_Rows_datei = int_Rows_datei + 1
 
-Random_int = (random.randint(0,int_Rows_datei))
-Random_int = Random_int  - 1
-Hangman_Word = data[Random_int]
+Hangman_Word = Choose_Word(int_Rows_datei)
+
 print("Willkommen zu HANGMAN")
 Len_word = (len(Hangman_Word))
-Hangman_Word = Hangman_Word.lower()
 print("Das gesuchte Wort ist " + str(Len_word) + " Buchstaben lang")
+print(Hangman_Word)
 
 i = 1
 while i <= Len_word:
     Underscore_String.append("_")
     i = i + 1
-
 print(" ".join(Underscore_String))
 
 while (correct_guess < Len_word):
-    print(Hangman_Word)
     if len(eingegebene_Buchstaben) != 0:
         print(f"Folgende Buchstaben wurden bereits eingegeben: {eingegebene_Buchstaben}")
     input_Letter = input("Welcher Buchstabe? Groß und Kleinschreibung egal!:  ")
@@ -64,7 +81,8 @@ while (correct_guess < Len_word):
 
 if int_versuche >= max_versuche:
     print("Leider nicht geschafft - Maximale Anzahl an Versuche erreicht")
-print("Wort korrekt!")
+else:
+    print("Wort korrekt!")
 print("Das gesuchte Wort war: " + Hangman_Word)
 
 
