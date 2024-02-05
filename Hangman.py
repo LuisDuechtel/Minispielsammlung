@@ -1,6 +1,6 @@
 import random
 
-my_datei = open("C:\\Users\\Phili\\OneDrive\\DHBW\\VSCode\\Philipps_Repo\\notebooks\\Python_lernen\\Hangman_words.txt","r",encoding="UTF8")
+my_datei = open("Hangman_words.txt","r",encoding="UTF8")
 int_Rows_datei = 0
 Underscore_String = []
 eingegebene_Buchstaben = []
