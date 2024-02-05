@@ -15,6 +15,7 @@ eingegebene_Buchstaben = []
 correct_guess = 0
 max_versuche = 12
 int_versuche = 0
+guess =""
 data = my_datei.read().splitlines()
 GUI = tk.Tk()
 GUI.title("Hangman")
@@ -22,11 +23,21 @@ GUI.title("Hangman")
 Hangman_Label = tk.Label(GUI, font=("CourierK", 16))
 Hangman_Label.grid(row=0, column=0)
 
+
+
+def save_guess():
+    global guess
+    guess = guess_entry.get()
+    return guess
+
 guess_entry=tk.Entry(GUI, width=3, font=("Arial", 25))
 guess_entry.grid(row=2,column=0)
 
-Guess_button=tk.Button(GUI, text="Guess")
+Guess_button=tk.Button(GUI, text="Guess", command=save_guess)
 Guess_button.grid(row=2,column=1)
+
+Guess = save_guess()
+print(Guess)
 
 Result_Label=tk.Label(GUI,font=("Arial", 25))
 Result_Label.grid(row=3,column=0)
@@ -63,15 +74,15 @@ def create_underscore_String(Len_word):
     word_label.grid(row=1,column=0)
     return Word_with_blanks
 
-
+"""
 Hangman_Word = Choose_Word(data)
 Len_word = (len(Hangman_Word))
 Word_with_blanks = create_underscore_String(Len_word)
 
 while (correct_guess < Len_word):
     if len(eingegebene_Buchstaben) != 0:
-        Try_Letters_GUI(eingegebene_Buchstaben)
-    input_Letter = input("Welcher Buchstabe? Groß und Kleinschreibung egal!:  ")
+        Try_Letters_GUI(eingegebene_Buchstaben)   
+    
     input_Letter = input_Letter.lower()
     if len(input_Letter) > 1:
         print("SO NICHT!. Ein Buchstabe eingeben!")
@@ -106,5 +117,6 @@ if int_versuche >= max_versuche:
 else:
     print("Wort korrekt!")
 print("Das gesuchte Wort war: " + Hangman_Word)
-
+"""
 GUI.mainloop()
+print(guess)
