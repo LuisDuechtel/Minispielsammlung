@@ -1,5 +1,5 @@
 import random
-import tkinter
+import tkinter as tk
 
 hangman_art = [
     "   +---+\n   |   |\n       |\n       |\n       |\n       |\n=========",
@@ -11,8 +11,6 @@ hangman_art = [
     "   +---+\n   |   |\n   O   |\n  /|\\  |\n  / \\  |\n       |\n========="
 ]
 my_datei = open("Hangman_words.txt","r",encoding="UTF8")
-int_Rows_datei = 0
-Underscore_String = []
 eingegebene_Buchstaben = []
 correct_guess = 0
 max_versuche = 12
@@ -20,35 +18,59 @@ int_versuche = 0
 data = my_datei.read().splitlines()
 GUI = tk.Tk()
 GUI.title("Hangman")
+
 Hangman_Label = tk.Label(GUI, font=("CourierK", 16))
-Hangman_Label.grid(row=0, collumn=0)
+Hangman_Label.grid(row=0, column=0)
 
+guess_entry=tk.Entry(GUI, width=3, font=("Arial", 25))
+guess_entry.grid(row=2,column=0)
 
-def Choose_Word(int_Rows_datei):
+Guess_button=tk.Button(GUI, text="Guess")
+Guess_button.grid(row=2,column=1)
+
+Result_Label=tk.Label(GUI,font=("Arial", 25))
+Result_Label.grid(row=3,column=0)
+
+def Try_Letters_GUI(eingegebene_Buchstaben):
+    Try_Letters=tk.Label(GUI,text=eingegebene_Buchstaben, font=("Arial", 25))
+    Try_Letters.grid(row=4,column=0)
+
+def Info_GUI(Info,eingegebene_Buchstaben):
+    Info=tk.Label(GUI, text=Info, font=("Arial", 25))
+    Info.grid(row=5,column=0)
+
+def Choose_Word(data):
+    int_Rows_datei = 0
+    for x in data:
+        int_Rows_datei = int_Rows_datei + 1
     Random_int = (random.randint(0,int_Rows_datei))
     Random_int = Random_int  - 1
     Hangman_Word = data[Random_int]
     Hangman_Word = Hangman_Word.lower()
+    return Hangman_Word
 
-for x in data:
-    int_Rows_datei = int_Rows_datei + 1
+def update_Hangman(mistake):
+    Hangman_Label.config(text=hangman_art[mistake])
 
-Hangman_Word = Choose_Word(int_Rows_datei)
+def create_underscore_String(Len_word):
+    Underscore_String = []
+    i = 0
+    while i <= Len_word:
+        Underscore_String.append("_")
+        i = i + 1
+    Word_with_blanks = (" ".join(Underscore_String))
+    word_label = tk.Label(GUI, text=Word_with_blanks, font=("Arial",20))
+    word_label.grid(row=1,column=0)
+    return Word_with_blanks
 
-print("Willkommen zu HANGMAN")
+
+Hangman_Word = Choose_Word(data)
 Len_word = (len(Hangman_Word))
-print("Das gesuchte Wort ist " + str(Len_word) + " Buchstaben lang")
-print(Hangman_Word)
-
-i = 1
-while i <= Len_word:
-    Underscore_String.append("_")
-    i = i + 1
-print(" ".join(Underscore_String))
+Word_with_blanks = create_underscore_String(Len_word)
 
 while (correct_guess < Len_word):
     if len(eingegebene_Buchstaben) != 0:
-        print(f"Folgende Buchstaben wurden bereits eingegeben: {eingegebene_Buchstaben}")
+        Try_Letters_GUI(eingegebene_Buchstaben)
     input_Letter = input("Welcher Buchstabe? Groß und Kleinschreibung egal!:  ")
     input_Letter = input_Letter.lower()
     if len(input_Letter) > 1:
@@ -85,4 +107,4 @@ else:
     print("Wort korrekt!")
 print("Das gesuchte Wort war: " + Hangman_Word)
 
-
+GUI.mainloop()
