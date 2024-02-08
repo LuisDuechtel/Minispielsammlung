@@ -3,6 +3,11 @@ from tkinter import messagebox
 from string import ascii_uppercase
 import random
 
+#ZWei Probleme:
+# Es wird zu früh gesagt, dass da Wort richtig ist
+# Bei Neuem Spiel bleibt das Wort davor stehen. Es kommt eine neues Label obendrüber - Blöd
+
+
 my_datei = open("Hangman_words.txt", "r", encoding="UTF8")
 data = my_datei.read().splitlines()
 GUI = Tk()
@@ -30,7 +35,7 @@ def create_underscore_String(Len_word):
     word_label.grid(row=3, column=0, columnspan=9)
     return Word_with_blanks
 
-def newGame():
+def newGame(data):
     global Hangman_Word
     global Len_word
     global Word_with_blanks
@@ -41,6 +46,7 @@ def newGame():
     Hangman_Word = Choose_Word(data)
     Len_word = len(Hangman_Word)
     Word_with_blanks = create_underscore_String(Len_word)
+
 
 def make_guess(Letter):
     global correct_guess, int_versuche, Underscore_String, Word_with_blanks
@@ -55,11 +61,12 @@ def make_guess(Letter):
             Word_with_blanks = " ".join(Underscore_String)
             word_label.config(text=Word_with_blanks)
             
-            if correct_guess == Len_word:
-                messagebox.showinfo("Gewonnen!", f"Herzlichen Glückwunsch! Du hast das Wort '{Hangman_Word}' richtig erraten.")
         else:
             int_versuche += 1
             imgLabel.config(image=photos[int_versuche])
+        if correct_guess == Len_word:
+            messagebox.showinfo("Gewonnen!", f"Herzlichen Glückwunsch! Du hast das Wort '{Hangman_Word}' richtig erraten.")
+    
     else:
         messagebox.showinfo("Verloren!", f"Du hast das Wort: '{Hangman_Word}' NICHT erraten.")
 
@@ -70,8 +77,8 @@ for c in ascii_uppercase:
     Button(GUI, text=c, command=lambda c=c: make_guess(c), font=('Helvetica 18'), width=4).grid(row=5 + n // 9, column=n % 9)
     n += 1
 
-new_game_button = Button(GUI, text="Neues\nSpiel", command=lambda: newGame(), font=("Helvetica 10 bold"))
+new_game_button = Button(GUI, text="Neues\nSpiel", command=lambda: newGame(data), font=("Helvetica 10 bold"))
 new_game_button.grid(row=5 + n // 9, column=n % 9) 
 
-newGame()
+newGame(data)
 GUI.mainloop()
