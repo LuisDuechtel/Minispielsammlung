@@ -45,7 +45,7 @@ Feder
 Laub
 Socke
 Mantel
-Käse
+Kaese
 Traum
 Welle
 Wiese
@@ -58,7 +58,7 @@ Huhn
 Ei
 Salz
 Zelt
-Rätsel
+Raetsel
 Rauch
 Hafen
 Holz
@@ -70,7 +70,7 @@ Schlaf
 Wolf
 Stift
 Flug
-König
+Koenig
 Blatt
 Maler
 Fisch
@@ -94,7 +94,7 @@ Tor
 Tau
 Dach
 Saft
-Löwe
+Loewe
 Leim
 Leiter
 Linie
