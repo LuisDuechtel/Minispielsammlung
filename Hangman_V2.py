@@ -2,6 +2,16 @@ from tkinter import *
 from tkinter import messagebox
 from string import ascii_uppercase
 import random
+import pygame
+pygame.init()
+
+custom_sound_path = "golfclap.mp3"
+
+    # Lade den Sound
+pygame.mixer.music.load(custom_sound_path)
+
+    # Spiele den Sound ab
+
 
 my_datei = open("Hangman_words.txt", "r", encoding="UTF8")
 data = my_datei.read().splitlines()
@@ -69,6 +79,7 @@ def make_guess(Letter):
             imgLabel.config(image=photos[int_versuche])
         
         if Word_without_blanks == Hangman_Word:
+            pygame.mixer.music.play()
             messagebox.showinfo("Gewonnen!", f"Herzlichen Glückwunsch! Du hast das Wort '{Hangman_Word}' richtig erraten.")
     
     else:
