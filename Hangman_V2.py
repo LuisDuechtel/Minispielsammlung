@@ -3,10 +3,8 @@ from tkinter import messagebox
 from string import ascii_uppercase
 import random
 
-#ZWei Probleme:
-# Es wird zu früh gesagt, dass da Wort richtig ist
-# Bei Neuem Spiel bleibt das Wort davor stehen. Es kommt eine neues Label obendrüber - Blöd
 
+# Bei Neuem Spiel bleibt das Wort davor stehen. Es kommt eine neues Label obendrüber - Blöd
 
 my_datei = open("Hangman_words.txt", "r", encoding="UTF8")
 data = my_datei.read().splitlines()
@@ -17,6 +15,7 @@ photos = [PhotoImage(file="images/hang0.png"), PhotoImage(file="images/hang1.png
           PhotoImage(file="images/hang3.png"), PhotoImage(file="images/hang4.png"), PhotoImage(file="images/hang5.png"),
           PhotoImage(file="images/hang6.png"), PhotoImage(file="images/hang7.png"), PhotoImage(file="images/hang8.png"),
           PhotoImage(file="images/hang9.png"), PhotoImage(file="images/hang10.png"), PhotoImage(file="images/hang11.png")]
+
 
 def Choose_Word(data):
     global Hangman_Word
@@ -45,6 +44,7 @@ def newGame(data):
     int_versuche = 0
     Hangman_Word = Choose_Word(data)
     Len_word = len(Hangman_Word)
+    print(Hangman_Word)
     Word_with_blanks = create_underscore_String(Len_word)
 
 
@@ -64,6 +64,7 @@ def make_guess(Letter):
         else:
             int_versuche += 1
             imgLabel.config(image=photos[int_versuche])
+        
         if correct_guess == Len_word:
             messagebox.showinfo("Gewonnen!", f"Herzlichen Glückwunsch! Du hast das Wort '{Hangman_Word}' richtig erraten.")
     
@@ -72,6 +73,7 @@ def make_guess(Letter):
 
 imgLabel = Label(GUI)
 imgLabel.grid(row=0, column=0, columnspan=3, padx=10, pady=40)
+
 n = 0
 for c in ascii_uppercase:
     Button(GUI, text=c, command=lambda c=c: make_guess(c), font=('Helvetica 18'), width=4).grid(row=5 + n // 9, column=n % 9)
