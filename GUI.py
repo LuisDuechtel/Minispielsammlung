@@ -12,8 +12,11 @@ def button3_clicked():
 
 
 root = tk.Tk()
-root.geometry("300x150")
+root.geometry("300x300")
 root.title("Spielesammlung DHBW Bad Mergentheim")
+
+label = tk.Label(root, text="Minispielsammlung von Robin, Luis und Philipp")
+label.pack(pady=20)
 
 button1 = tk.Button(root, text="Hangman", command=button1_clicked)
 button1.pack(pady=10)
