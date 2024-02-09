@@ -10,7 +10,7 @@ my_datei = open("Hangman_words.txt", "r", encoding="UTF8")
 data = my_datei.read().splitlines()
 GUI = Tk()
 GUI.title("Hangman")
-
+GUI.geometry("600x400")
 photos = [PhotoImage(file="images/hang0.png"), PhotoImage(file="images/hang1.png"), PhotoImage(file="images/hang2.png"),
           PhotoImage(file="images/hang3.png"), PhotoImage(file="images/hang4.png"), PhotoImage(file="images/hang5.png"),
           PhotoImage(file="images/hang6.png"), PhotoImage(file="images/hang7.png"), PhotoImage(file="images/hang8.png"),
