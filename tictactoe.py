@@ -51,12 +51,12 @@ class TicTacToeGUI:
         if self.board.make_turn(cell, self.current_player):
             self.buttons[cell].config(text='X' if self.current_player == 1 else 'O')
             if self.board.check_win(self.current_player):
-                messagebox.showinfo("Tic Tac Toe", f"Player {self.current_player} wins!")
                 pygame.init()
                 pygame.mixer.init()
                 sound = pygame.mixer.Sound("drunkensailor.mp3")
                 sound.play()
                 self.reset_board()
+                messagebox.showinfo("Tic Tac Toe", f"Player {self.current_player} wins!")
             elif self.board.is_full():
                 messagebox.showinfo("Tic Tac Toe", "It's a tie!")
                 self.reset_board()

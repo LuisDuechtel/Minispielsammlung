@@ -10,10 +10,14 @@ def button2_clicked():
 def button3_clicked():
     call(["python", "SchereSteinPapier.py"])
 
-
 root = tk.Tk()
 root.geometry("300x300")
 root.title("Spielesammlung DHBW Bad Mergentheim")
+
+# Hintergrundbild laden
+#background_image = tk.PhotoImage(file="coolesbild.jpg")  # Dateipfad anpassen
+#background_label = tk.Label(root, image=background_image)
+#background_label.place(relwidth=1, relheight=1)
 
 label = tk.Label(root, text="Minispielsammlung von Robin, Luis und Philipp")
 label.pack(pady=20)
@@ -24,7 +28,7 @@ button1.pack(pady=10)
 button2 = tk.Button(root, text="tictactoe", command=button2_clicked)
 button2.pack(pady=10)
 
-button3 = tk.Button(root, text="Schere Stein Paar Bier", command=button3_clicked)
+button3 = tk.Button(root, text="Schere Stein Papier", command=button3_clicked)
 button3.pack(pady=10)
 
 root.mainloop()
