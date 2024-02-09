@@ -56,8 +56,10 @@ class Board:
 class TicTacToeGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("Tic Tac Toe")
+        self.root.title("Tic Tac Toe")  
+        self.root.geometry("400x200")  
 
+        
         self.player_a = BoardPlayer(1)
         self.player_b = BoardPlayer(-1)
         self.active_player = self.player_a
