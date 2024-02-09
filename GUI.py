@@ -11,15 +11,15 @@ def button3_clicked():
     call(["python", "SchereSteinPapier.py"])
 
 root = tk.Tk()
-root.geometry("300x300")
+root.geometry("1200x800")
 root.title("Spielesammlung DHBW Bad Mergentheim")
 
-# Hintergrundbild laden
-#background_image = tk.PhotoImage(file="coolesbild.jpg")  # Dateipfad anpassen
-#background_label = tk.Label(root, image=background_image)
-#background_label.place(relwidth=1, relheight=1)
 
-label = tk.Label(root, text="Minispielsammlung von Robin, Luis und Philipp")
+background_image = tk.PhotoImage(file="clouds.png")  
+background_label = tk.Label(root, image=background_image)
+background_label.place(relwidth=1, relheight=1)
+
+label = tk.Label(root, bg="#e4eaff", text="Minispielsammlung von Robin, Luis und Philipp", font=("Arial, 20"))
 label.pack(pady=20)
 
 button1 = tk.Button(root, text="Hangman", command=button1_clicked)
