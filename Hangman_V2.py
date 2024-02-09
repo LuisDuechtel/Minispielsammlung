@@ -3,19 +3,16 @@ from tkinter import messagebox
 from string import ascii_uppercase
 import random
 
-
-# Bei Neuem Spiel bleibt das Wort davor stehen. Es kommt eine neues Label obendrüber - Blöd
-
 my_datei = open("Hangman_words.txt", "r", encoding="UTF8")
 data = my_datei.read().splitlines()
+Label_created = False
 GUI = Tk()
 GUI.title("Hangman")
-
+GUI.geometry("600x400")
 photos = [PhotoImage(file="images/hang0.png"), PhotoImage(file="images/hang1.png"), PhotoImage(file="images/hang2.png"),
           PhotoImage(file="images/hang3.png"), PhotoImage(file="images/hang4.png"), PhotoImage(file="images/hang5.png"),
           PhotoImage(file="images/hang6.png"), PhotoImage(file="images/hang7.png"), PhotoImage(file="images/hang8.png"),
           PhotoImage(file="images/hang9.png"), PhotoImage(file="images/hang10.png"), PhotoImage(file="images/hang11.png")]
-
 
 def Choose_Word(data):
     global Hangman_Word
@@ -28,9 +25,13 @@ def Choose_Word(data):
 def create_underscore_String(Len_word):
     global Underscore_String
     global word_label
+    global Label_created
     Underscore_String = ["_"] * Len_word
     Word_with_blanks = " ".join(Underscore_String)
+    if Label_created == True:
+        word_label.destroy()
     word_label = Label(GUI, text=Word_with_blanks, font=("Arial", 20))
+    Label_created = True
     word_label.grid(row=3, column=0, columnspan=9)
     return Word_with_blanks
 
@@ -50,6 +51,7 @@ def newGame(data):
 
 def make_guess(Letter):
     global correct_guess, int_versuche, Underscore_String, Word_with_blanks
+    Word_without_blanks = ""
     if int_versuche < 11:
         if Letter in Hangman_Word:
             index_counter = 0
@@ -60,12 +62,13 @@ def make_guess(Letter):
                 index_counter += 1
             Word_with_blanks = " ".join(Underscore_String)
             word_label.config(text=Word_with_blanks)
+            Word_without_blanks = Word_with_blanks.replace(" ", "")
             
         else:
             int_versuche += 1
             imgLabel.config(image=photos[int_versuche])
         
-        if correct_guess == Len_word:
+        if Word_without_blanks == Hangman_Word:
             messagebox.showinfo("Gewonnen!", f"Herzlichen Glückwunsch! Du hast das Wort '{Hangman_Word}' richtig erraten.")
     
     else:
