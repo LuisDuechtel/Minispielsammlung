@@ -30,18 +30,25 @@ class TicTacToeGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Tic Tac Toe")
-        self.root.geometry("300x300")
+        self.root.geometry("1200x800")
+        
+        self.background_image = tk.PhotoImage(file="vulcan.png")  
+        self.background_label = tk.Label(self.root, image=self.background_image)
+        self.background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
         self.current_player = 1
         self.board = Board()
-
+        
         self.create_board()
 
     def create_board(self):
+        self.main_frame = tk.Frame(self.root, bg='grey')
+        self.main_frame.place(relx=0.5, rely=0.5, anchor='center')
+
         self.buttons = []
         for i in range(3):
             for j in range(3):
-                button = tk.Button(self.root, text='', font=('Arial', 30), width=3, height=1,
+                button = tk.Button(self.main_frame, text='', font=('Arial', 30), width=3, height=1,
                                    command=lambda row=i, col=j: self.handle_click(row, col))
                 button.grid(row=i, column=j, padx=5, pady=5)
                 self.buttons.append(button)
