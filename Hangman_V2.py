@@ -6,11 +6,7 @@ import pygame
 pygame.init()
 
 custom_sound_path = "golfclap.mp3"
-
-    # Lade den Sound
 pygame.mixer.music.load(custom_sound_path)
-
-    # Spiele den Sound ab
 
 
 my_datei = open("Hangman_words.txt", "r", encoding="UTF8")
