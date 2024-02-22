@@ -5,7 +5,7 @@ import random
 import pygame
 pygame.init()
 
-custom_sound_path = "golfclap.mp3"
+custom_sound_path = "assets/golfclap.mp3"
 pygame.mixer.music.load(custom_sound_path)
 
 

@@ -32,7 +32,7 @@ class TicTacToeGUI:
         self.root.title("Tic Tac Toe")
         self.root.geometry("1200x800")
         
-        self.background_image = tk.PhotoImage(file="vulcan.png")  
+        self.background_image = tk.PhotoImage(file="assets/vulcan.png")  
         self.background_label = tk.Label(self.root, image=self.background_image)
         self.background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
@@ -60,7 +60,7 @@ class TicTacToeGUI:
             if self.board.check_win(self.current_player):
                 pygame.init()
                 pygame.mixer.init()
-                sound = pygame.mixer.Sound("drunkensailor.mp3")
+                sound = pygame.mixer.Sound("assets/drunkensailor.mp3")
                 sound.play()
                 self.reset_board()
                 messagebox.showinfo("Tic Tac Toe", f"Player {self.current_player} wins!")
