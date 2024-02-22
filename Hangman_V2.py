@@ -54,7 +54,6 @@ def newGame(data):
     print(Hangman_Word)
     Word_with_blanks = create_underscore_String(Len_word)
 
-
 def make_guess(Letter):
     global correct_guess, int_versuche, Underscore_String, Word_with_blanks
     Word_without_blanks = ""
