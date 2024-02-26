@@ -49,8 +49,8 @@ class TicTacToeGUI:
         for i in range(3):
             for j in range(3):
                 button = tk.Button(self.main_frame, text='', font=('Arial', 30), width=3, height=1,
-                                   command=lambda row=j, col=i: self.handle_click(row, col))
-                button.grid(row=i, column=j, padx=5, pady=5)
+                                   command=lambda row=i, col=j: self.handle_click(row, col))
+                button.grid(row=j, column=i, padx=5, pady=5)
                 self.buttons.append(button)
 
     def handle_click(self, row, col):
@@ -63,16 +63,16 @@ class TicTacToeGUI:
                 sound = pygame.mixer.Sound("assets/drunkensailor.mp3")
                 sound.play()
                 self.reset_board()
-                messagebox.showinfo("Tic Tac Toe", f"Player {self.current_player} wins!")
+                messagebox.showinfo("Tic Tac Toe", f"Spieler {self.current_player} hat gewonnen!")
             elif self.board.is_full():
-                messagebox.showinfo("Tic Tac Toe", "It's a tie!")
+                messagebox.showinfo("Tic Tac Toe", "Leider Unentschieden!")
                 self.reset_board()
             elif self.current_player == 1:
                 self.current_player = -1
             else:
                 self.current_player = 1               
         else:
-            messagebox.error_message("Tic Tac Toe", "Invalid Move")
+            messagebox.error_message("Tic Tac Toe", "Ungültiger Zug")
 
     def reset_board(self):
         for button in self.buttons:

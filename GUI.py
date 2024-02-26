@@ -15,7 +15,7 @@ root.geometry("1200x800")
 root.title("Spielesammlung DHBW Bad Mergentheim")
 
 
-background_image = tk.PhotoImage(file="./assets/clouds.png")  
+background_image = tk.PhotoImage(file="assets/clouds.png")  
 background_label = tk.Label(root, image=background_image)
 background_label.place(relwidth=1, relheight=1)
 
