@@ -3,6 +3,7 @@
 ## Prozedurale Programmierung in Python - Flappy Bird Spiel
 
 Dieser Code implementiert das Flappy Bird Spiel in Python unter Verwendung der Pygame-Bibliothek. Hier sind einige Punkte zur Überprüfung und Verbesserung:
+Link zum GitHub der Gruppe: https://github.com/ActiveClientMods/Flappybird-Projekt
 
 ### Grundelemente der prozeduralen Programmierung
 - **Funktionen:** Der Code verwendet Funktionen, um bestimmte Aufgaben zu erfüllen, z. B. die `draw_text`-Funktion für die Anzeige von Text auf dem Bildschirm. Dies fördert die Wiederverwendbarkeit und Lesbarkeit des Codes.

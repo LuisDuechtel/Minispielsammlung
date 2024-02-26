@@ -177,13 +177,18 @@ Our main goal was to work close together in our team, so we solved most of the p
 
 ![Philipp_Support_Message](/screenshots/Philipp_Support_Message.png)
 
+![Luis_Düchtel_Support_Messages](https://github.com/LuisDuechtel/Minispielsammlung/assets/93716392/0be39cc1-57a0-48e3-89ad-463ac448e83c)
+
+
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
-
+Wir haben uns dafür das Flappy Bird Projekt einer anderen Gruppe angeschaut und zu diesem unser Feedback abgeben inklusive Verbesserungsvorschläge. Siehe Review-GradingCriteria.md.
 # Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 <!-- Which technology did you learn outside of the teacher given input -->
 <!-- Did you or your group get help from someone in the classroom (get a support message here from the person who helped you) -->
+Da wir für unser Projekt eine GUI benutzen wollten, haben wir uns mit verschieden Technologien zur Erstellung einer GUI auseinander gesetzt. Nach ein bisschen Rechereche haben wir uns dann dafür entschieden, tkinter zu benutzen. tkinter ist eine Python-Bibliothek, die es einem ermöglicht durch recht simplen Code eine GUI zu implementieren. Um uns näher mit der Biblithek zu beschäftigen und ihre Funktionsweise zu verstehen haben wir ChatGPT als auch YouTube-Tutorials genutzt. Das hat sehr gut funktioniert.
 
+Wir haben individuelle Hilfe von Mitgliedern aus anderen Gruppen erhalten, als auch selber geholfen soweit es uns möglich war. Siehe Personale und soziale Kompetenzen!
 
 
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
@@ -191,8 +196,10 @@ Our main goal was to work close together in our team, so we solved most of the p
 # Die Studierenden können eigenständig Problemstellungen der Praxis analysieren und zu deren Lösung Programme entwerfen (30)
 <!-- Which parts of your project are you proud of and why (describe, analyse, link) -->
 <!-- Where were the problems with your implementation, timeline, functionality, team management (describe, analyse, reflect from past to future, link if relevant) -->
+Der Teil unseres Codes auf den wir besonders Stolz sind, ist das Hangman-Game von Philipp, da das Programm etwas komplexer ist als ein einfaches Schere, Stein, Papier oder das TikTakToe. Vorallem mit der graphichen Gestaltung, wie zum Beispiel die User-Eingabe in Form einer Tastur und der graphische Aufbau des Galgens empfinden wir als sehr gelungen. Zum Spaß haben wir auch noch ein paar Sounds eingebaut bei verschiedenen Interaktionen, als Beipsiel falls man ein Wort richtig errät.
+Link zum Hangman-Code: https://github.com/LuisDuechtel/Minispielsammlung/blob/main/Hangman_V2.py
 
-
+Während unserer Projekt hatten wir tatsächlich mit keinen all zu großen Hindernissen zu kämpfen. Die Planung verlief unkompliziert und wir hatten uns nach kurzer Zeit auf ein Thema geeinigt. Danach haben wir den genaueren Umfang, sowie nähere Details besprochen, was unsere Spielesammlung beinhalten soll. Im Anschluss haben wir bereits erste Entwürfe unseres Codes gestartet, jedoch hatten unsere Programme noch keine eigene GUI, sondern waren jediglich über die Konsolenaussgabe zu benutzen. Da kam uns der Gedanke, dass wir unsere Minigames sowohl optisch als auch funktional mit einer GUI auf werten wollen. Wie schon zuvor genannt hatte niemand von uns Erfahrungen, mit der GUI-Erstellung in Python, weshalb wir uns erstmal zu diesem Thema informieren mussten. Aber mit dem Internet als auch der Hilfe und Tipps von Kommilitonen konnte diese Hürde auch zeitnah überwunden werden. Wir hatten zum Ende hin Schwierigkeiten mit unserem Time-Management, da wir sowohl die Klausuren als auch noch andere Abgaben parallel bearbeiten mussten. Unser Team-Management würden wir als gut beschreiben, wir hatten eine faire und gut organisierte Arbeitsteilung. Dort hat auf jeden Fall die Arbeit mit Gii/GitHub sehr gut unterstützt. Hier muss man jedoch erwähnen, das es Anfangs Probleme gab, Git in VS Code einzubinden und die Push/Pull Funktionen zu benutzen.
 
 ## Kenntnisse in prozeduraler Programmierung:
 
