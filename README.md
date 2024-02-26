@@ -12,16 +12,55 @@ Alle Kriterien betreffen nur die Projektarbeit. Beweismaterial kommt aus dem Gru
 ## FACHKOMPETENZ (40 Punkte)
 
 # Die Studierenden kennen die Grundelemente der prozeduralen Programmierung. (10)
-<!-- Siehe Kenntnisse in prozeduraler Programmierung: zutreffendes wählen und beweisen-->
-8595958: Das Script "Hangman_V2" wurden alle Teile in Funktionen geschrieben, damit es besser lesbar und wiederholt ausführbar ist, wenn das Script ausgeführt wird -> "Neues Spiel"-Button
+
+Prozedurale Programmierung besteht aus folgenden grundlegenden Elementen:
+- Funktionen
+- Variablen 
+- Kontrollstrukturen (Schleifen und Abfragen)
+
+In unserem Python-Projekt haben wir unser gelerntes Wissen über die Programmierung angewendet und alle Elemente verwendet. Im Folgenden sind paar Beispiele aus dem Code auflistet.
+
+### Funktionen:
+Es wurden Funktionen im Code verwendet, damit man den Code leichter lesen kann und er strukturierter ist. Zusätzlich kann eine Funktion öfters in einem Programmdurchlauf aufgerufen werden.
+Da z.B. im Spiel Hangman weiter Wörter erraten möchte, haben wir ein Button "Neues Spiel" eingebaut. Dieser Button führt eine Variable aus die Variablen zurücksetzt, damit man ein neues Spiel starten kann.
+
+![Funktionen](image-1.png)
+
+### Variablen:
+
+In dem folendem Bild aus dem Code "Hangman_V2.py" sieht man gut das Variablen verwendet deklariert worden sind.
+
+Zusätzlich wurde das Schlüsselwort "global" verwendet, da die Variable in einer Funktion deklariert worden ist. Durch "global" ist die Variable nicht nur lokal ind er Funktion sondern auch außerhalb der Funktion aufrufbar ist.
+
+![Variablen](image.png)
+
+### Kontrollstrukturen (Schleifen und Abfragen):
+Kontrollstrukturen beinhalten zum Beispiel For-Schleifen und If-Abfragen.
+Im folgenden Bild wurde eine Schleife und Abfrage verwendet um zu überprüfen ob der eingegebe Buchstaben im gesuchten Wort vorhanden ist. Da ein Buchstabe mehrfach vorhanden sein kann benötigt man eine Schleife.
+
+![For-Schleife_und_If-Abfrage](image-2.png)
 
 # Sie können die Syntax und Semantik von Python (10)
-<!-- Eine Stelle aus ihrem Programmieren wählen auf die sie besonders stolz sind und begründen -->
-8595958:
+Worauf ich stolz bin ist die Tastatur-GUI.
+Durch die For-Schleife und ascii_uppercase wurde eine Tastatur mit Buttons gebaut.
+Wenn ein Button ausgewählt wird, wird eine Funktion ausgeführt, die den Buchstaben im gesuchten Wort prüft.
+Durch den Button "Neues Spiel" wird die Funktion "new-Game" ausgeführt und das Spiel wird mit einem neuen Wort gestartet.
+
+![Tastatur+Button](image-3.png)
 
 
 # Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
-<!-- Anhand von commits zeigen, wie jeder im Projekt einen Beitrag geleistet hat -->
+Das Projekt wurde mit Luis Düchtel (LuisDuechtel) Robin Schuch (WeltraumEnte0) und Philipp Rambacher (PhilippR84) durchgeführt.
+Die Idee zur Spielesammlung haben wir durch ChatGPT gefunden. 
+Wir sind der Meinung, dass aufgrund der Zeit und unserem Können das Projekt gut gewählt worden ist. 
+Wir haben uns dauerhaft oft über Discord kommuniziert, damit jeder auf dem aktuellen Stand ist, wie das Projekt steht.
+Zusätzlich haben wir ein gemeinsames GIT-Repo aufgebaut.
+Das war für uns alle neu, da wir bisher noch nicht viel mit GIT gearbeitet haben.
+Da jeder an seinem eigenen Teil-Projekt arbeiten konnte, ohne jemand anderen zu stören haben wir nicht viel commited sondern eher lokal gearbeitet. 
+Trotzdem haben wir wenn wir uns besprochen haben oder Probleme hatten unseren aktuellen Stand auf Git gepusht.
+Im folgedem sieht man ein ausschnit aus GIT:
+
+![GIT_Commits](image-4.png)
 
 
 # Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
