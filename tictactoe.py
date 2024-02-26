@@ -49,7 +49,7 @@ class TicTacToeGUI:
         for i in range(3):
             for j in range(3):
                 button = tk.Button(self.main_frame, text='', font=('Arial', 30), width=3, height=1,
-                                   command=lambda row=i, col=j: self.handle_click(row, col))
+                                   command=lambda row=j, col=i: self.handle_click(row, col))
                 button.grid(row=i, column=j, padx=5, pady=5)
                 self.buttons.append(button)
 
@@ -87,3 +87,7 @@ def start_game():
 
 if __name__ == "__main__":
     start_game()
+    
+    
+    
+    

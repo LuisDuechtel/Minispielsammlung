@@ -27,6 +27,36 @@ Alle Kriterien betreffen nur die Projektarbeit. Beweismaterial kommt aus dem Gru
 # Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
 <!-- Eine Stelle aus dem Projekt wählen auf die sie besonders stolz sind und begründen -->
 
+Der folgende Codeausschnitt aus unserem Hangman Game der Spielesammlung ist einer der coolsten im Projekt. Die verschachtelten if-Statements haben ihre Zeit in Anspruch genommen, bis alles so funktioniert hat, wie es soll. Jetzt funktionert aber alles und ich habe alles in der Funktion "make_guess" zusammengeführt. Sie nimmt den Buchstaben vom Benutzer entgegen und prüft, ob er im Wort enthalten ist. Wenn ja, aktualisiert sie die Anzeige des Wortes mit den richtigen Buchstaben. Wenn nicht, erhöht sie den Versuchszähler und zeigt das nächste Bild des Galgenmännchens an. Am coolsten ist, dass sie auch überprüft, ob das Wort vollständig erraten wurde, und dann die passende Meldung ausgibt – entweder "Gewonnen!" oder "Verloren!". Das ist die wichtigste Logik im Spiel und hat viel Spaß gemacht zu coden. Dieser Abschnitt ist auch während einer unserer Discord Calls in Zusammenarbeit entstanden. Daher ist diese Stelle für mich/uns auch eine der coolsten.
+
+```code
+def make_guess(Letter):
+    global correct_guess, int_versuche, Underscore_String, Word_with_blanks
+    Word_without_blanks = ""
+    if int_versuche < 11:
+        if Letter in Hangman_Word:
+            index_counter = 0
+            for One_Letter in Hangman_Word:
+                if One_Letter == Letter:
+                    correct_guess += 1
+                    Underscore_String[index_counter] = Letter
+                index_counter += 1
+            Word_with_blanks = " ".join(Underscore_String)
+            word_label.config(text=Word_with_blanks)
+            Word_without_blanks = Word_with_blanks.replace(" ", "")
+            
+        else:
+            int_versuche += 1
+            imgLabel.config(image=photos[int_versuche])
+        
+        if Word_without_blanks == Hangman_Word:
+            pygame.mixer.music.play()
+            messagebox.showinfo("Gewonnen!", f"Herzlichen Glückwunsch! Du hast das Wort '{Hangman_Word}' richtig erraten.")
+    
+    else:
+        messagebox.showinfo("Verloren!", f"Du hast das Wort: '{Hangman_Word}' NICHT erraten.")
+
+```
 
 
 ## METHODENKOMPETENZ (10 Punkte)
@@ -34,18 +64,27 @@ Alle Kriterien betreffen nur die Projektarbeit. Beweismaterial kommt aus dem Gru
 # Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
 <!-- Beweise anbringen für Nutzen folgender Tools (können links, screenshots und screnncasts sein) -->
 
-<!-- zB -->
 <!-- GIT -->
+It was the first time using git for all of us. At the beginning it took some time to get used to commiting and pulling in VS Code. But after we figured that out, git is a really cool tool to organize your code. Way better than just sending zip. files over discord the whole day long...(was terrible)
+https://github.com/LuisDuechtel/Minispielsammlung
 <!-- VSC -->
+I've used other IDEs like Eclipse before, but VS really convinced me to continue using it. VS Code is way easyer to handle and I quite like the minimalistic and simple design. You're always just seeing the windows and informations you want to see, nothing of the unnecessary stuff.
+![alt text](image.png)
 <!-- Copilot -->
+We got some problems with the registration process for the GitHub Copilot...But we found another really good AI for coding. 
+It's called tabnine, and the way how it works is pretty much the same. You got a very percise auto completion, which helps a lot in repetitive things. For example, when coding all the different winning combinations for TicTacToe you start tipping the first 2 and get the rest suggested. That's a huge advantage, because the code is kind of redundant but you would need to change the list indixes all the time. This step is completely done by the ai. You just check in the end if everything's working and correct. This saves a lot of time, when writing many lines of code.
+![alt text](image-1.png)
 <!-- other -->
-
+ChatGPT
+We used ChatGPT for getting information about how to write better and more effective code. For example, we asked chat when we had our code on how to push the performance and make it more efficient. Also ChatGPT's really good for asking about, how to implement a certain functionality or how to properly use Tkinter. (chat is quite helpful for Tkinter, but we still despaired sometimes...) :D
 
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
 # Die Studierenden können ihre Software erläutern und begründen. (5)
 <!-- Jeder in der Gruppe: You have helped someone else and taught something to a fellow student (get a support message from one person) -->
+Our main goal was to work close together in our team, so we solved most of the problems while our Discord coding-sessions. But we had some problems where we weren't able to solve in our group or nobody was available so we had a good exchange with other groups aswell. Was interesting to see what kinds of problems and challenges other teams are facing during der projects.
+![alt text](image-2.png)
 
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
