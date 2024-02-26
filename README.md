@@ -182,11 +182,13 @@ Our main goal was to work close together in our team, so we solved most of the p
 
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
-
+Wir haben uns dafür das Flappy Bird Projekt einer anderen Gruppe angeschaut und zu diesem unser Feedback abgeben inklusive Verbesserungsvorschläge. Siehe Review-GradingCriteria.md.
 # Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 <!-- Which technology did you learn outside of the teacher given input -->
 <!-- Did you or your group get help from someone in the classroom (get a support message here from the person who helped you) -->
+Da wir für unser Projekt eine GUI benutzen wollten, haben wir uns mit verschieden Technologien zur Erstellung einer GUI auseinander gesetzt. Nach ein bisschen Rechereche haben wir uns dann dafür entschieden, tkinter zu benutzen. tkinter ist eine Python-Bibliothek, die es einem ermöglicht durch recht simplen Code eine GUI zu implementieren. Um uns näher mit der Biblithek zu beschäftigen und ihre Funktionsweise zu verstehen haben wir ChatGPT als auch YouTube-Tutorials genutzt. Das hat sehr gut funktioniert.
 
+Wir haben individuelle Hilfe von Mitgliedern aus anderen Gruppen erhalten, als auch selber geholfen soweit es uns möglich war. Siehe Personale und soziale Kompetenzen!
 
 
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
