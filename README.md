@@ -177,6 +177,9 @@ Our main goal was to work close together in our team, so we solved most of the p
 
 ![Philipp_Support_Message](/screenshots/Philipp_Support_Message.png)
 
+![Luis_Düchtel_Support_Messages](https://github.com/LuisDuechtel/Minispielsammlung/assets/93716392/0be39cc1-57a0-48e3-89ad-463ac448e83c)
+
+
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
 
