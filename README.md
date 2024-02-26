@@ -17,6 +17,12 @@ Prozedurale Programmierung besteht aus folgenden grundlegenden Elementen:
 - Funktionen
 - Variablen 
 - Kontrollstrukturen (Schleifen und Abfragen)
+- Algorithmenbeschreibung
+- Datentypen
+- E/A-Operationen und Dateiverarbeitung
+- Operatoren
+- Stringverarbeitung
+- Strukturierte Datentypen
 
 In unserem Python-Projekt haben wir unser gelerntes Wissen über die Programmierung angewendet und alle Elemente verwendet. Im Folgenden sind paar Beispiele aus dem Code auflistet.
 
@@ -39,6 +45,49 @@ Kontrollstrukturen beinhalten zum Beispiel For-Schleifen und If-Abfragen.
 Im folgenden Bild wurde eine Schleife und Abfrage verwendet um zu überprüfen ob der eingegebe Buchstaben im gesuchten Wort vorhanden ist. Da ein Buchstabe mehrfach vorhanden sein kann benötigt man eine Schleife.
 
 ![For-Schleife_und_If-Abfrage](/screenshots/For_Schleife_Frage_1.png)
+
+### Algorithmenbeschreibung
+In dem folgender Funktion wird ein Wort für das Hangman-Spiel ausgesucht.
+Die Wörter die verwendet werden können, stehen in der Liste die in dem Code eingelesen wurde. Die Wörter der eingelesen Liste stehen in der Variable "data". 
+- Zuerst werden die Zeilen der Datei abefragt (Pro Zeile ist ein Wort).
+- Danach wird mit random.randint eine zufälligen Index herausgesucht 
+- Dieser zufälliger Index wird in der Liste abgefragt. Das entspricht dem Wort.
+- Als nächstes wird das Wort in Großbuchstaben umgewandelt.
+- Bei return Hangman_word wird die Variable wieder aus der Funktion ausgegben.
+
+![Algo_beschreibung](/screenshots/Choose_Word_Frage1.png)
+
+### Datentypen
+In unserem Python Projekt wurden die typischen Datentypen verwendet wie z.B.:
+- Listen
+- Strings
+- Integer
+
+### E/A-Operationen und Dateiverarbeitung
+Ein und Ausgabe wurde ebenfalls im Projekt verwendet.
+Eingabe ist z.B.: über Buttons bei Hangman, damit man Buchstaben auswählen kann.
+Ausgabe wurde zum Beispiel mit Labels umgesetzt. Wenn ein Spiel gewonnen / verloren wurde gibt es eine Ausgabe mit einem Label.
+
+![Ausgabe](/screenshots/Ausgabe_Frage1.png)
+
+### Operatoren
+Operatoren wie zum Beispiel das Hochzählen mit einer Addition wurden oft verwendet:
+z.B.: index_counter += 1
+
+
+### Stringverarbeitung
+Im Folgenden Code, wird ein "Underscore_String" erstellt. Der Underscore_String sieht zuerst nur so aus "____" Durch das "join" werden Leerzeichen hinzugefügt "_ _ _ _"
+```
+    Underscore_String = ["_"] * Len_word
+    Word_with_blanks = " ".join(Underscore_String)
+
+```
+
+### Strukturierte Datentypen
+Im Projekt wurden viele Listen verwendet zum Beispiel im Code von Schere-Stein-Papier
+```
+    choices = ["Schere", "Stein", "Papier"]
+```
 
 # Sie können die Syntax und Semantik von Python (10)
 Worauf ich stolz bin ist die Tastatur-GUI.
