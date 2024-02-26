@@ -28,15 +28,15 @@ In unserem Python-Projekt haben wir unser gelerntes Wissen über die Programmier
 
 ### Funktionen:
 Es wurden Funktionen im Code verwendet, damit man den Code leichter lesen kann und er strukturierter ist. Zusätzlich kann eine Funktion öfters in einem Programmdurchlauf aufgerufen werden.
-Da z.B. im Spiel Hangman weiter Wörter erraten möchte, haben wir ein Button "Neues Spiel" eingebaut. Dieser Button führt eine Variable aus die Variablen zurücksetzt, damit man ein neues Spiel starten kann.
+Da z.B. im Spiel Hangman weiter Wörter erraten möchte, haben wir ein Button "Neues Spiel" eingebaut. Dieser Button führt eine Funktion aus die Variablen zurücksetzt, damit man ein neues Spiel starten kann.
 
 ![Funktionen](/screenshots/Funktionen_Frage_1.png)
 
 ### Variablen:
 
-In dem folendem Bild aus dem Code "Hangman_V2.py" sieht man gut das Variablen verwendet deklariert worden sind.
+In dem folendem Bild aus dem Code "Hangman_V2.py" sieht man gut das Variablen verwendet und deklariert worden sind.
 
-Zusätzlich wurde das Schlüsselwort "global" verwendet, da die Variable in einer Funktion deklariert worden ist. Durch "global" ist die Variable nicht nur lokal ind er Funktion sondern auch außerhalb der Funktion aufrufbar ist.
+Zusätzlich wurde das Schlüsselwort "global" verwendet, da die Variable in einer Funktion deklariert worden ist. Durch "global" ist die Variable nicht nur lokal in der Funktion sondern auch außerhalb der Funktion aufrufbar.
 
 ![Variablen](/screenshots/Variablen_Frage_1.png)
 
@@ -71,12 +71,13 @@ Ausgabe wurde zum Beispiel mit Labels umgesetzt. Wenn ein Spiel gewonnen / verlo
 ![Ausgabe](/screenshots/Ausgabe_Frage1.png)
 
 ### Operatoren
-Operatoren wie zum Beispiel das Hochzählen mit einer Addition wurden oft verwendet:
-z.B.: index_counter += 1
-
+Operatoren wie zum Beispiel das Hochzählen mit einer Addition wurden oft verwendet. z.B.:
+```
+index_counter += 1
+```
 
 ### Stringverarbeitung
-Im Folgenden Code, wird ein "Underscore_String" erstellt. Der Underscore_String sieht zuerst nur so aus "____" Durch das "join" werden Leerzeichen hinzugefügt "_ _ _ _"
+Im Folgenden Code, wird ein "Underscore_String" erstellt. Der Underscore_String sieht zuerst nur so aus "__" Durch das "join" werden Leerzeichen hinzugefügt "_ _ _ _"
 ```
     Underscore_String = ["_"] * Len_word
     Word_with_blanks = " ".join(Underscore_String)
