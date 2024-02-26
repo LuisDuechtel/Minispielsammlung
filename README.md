@@ -24,7 +24,7 @@ In unserem Python-Projekt haben wir unser gelerntes Wissen über die Programmier
 Es wurden Funktionen im Code verwendet, damit man den Code leichter lesen kann und er strukturierter ist. Zusätzlich kann eine Funktion öfters in einem Programmdurchlauf aufgerufen werden.
 Da z.B. im Spiel Hangman weiter Wörter erraten möchte, haben wir ein Button "Neues Spiel" eingebaut. Dieser Button führt eine Variable aus die Variablen zurücksetzt, damit man ein neues Spiel starten kann.
 
-![Funktionen](Funktionen_Frage_1.png)
+![Funktionen](/screenshots/Funktionen_Frage_1.png)
 
 ### Variablen:
 
@@ -32,13 +32,13 @@ In dem folendem Bild aus dem Code "Hangman_V2.py" sieht man gut das Variablen ve
 
 Zusätzlich wurde das Schlüsselwort "global" verwendet, da die Variable in einer Funktion deklariert worden ist. Durch "global" ist die Variable nicht nur lokal ind er Funktion sondern auch außerhalb der Funktion aufrufbar ist.
 
-![Variablen](Variablen_Frage_1.png)
+![Variablen](/screenshots/Variablen_Frage_1.png)
 
 ### Kontrollstrukturen (Schleifen und Abfragen):
 Kontrollstrukturen beinhalten zum Beispiel For-Schleifen und If-Abfragen.
 Im folgenden Bild wurde eine Schleife und Abfrage verwendet um zu überprüfen ob der eingegebe Buchstaben im gesuchten Wort vorhanden ist. Da ein Buchstabe mehrfach vorhanden sein kann benötigt man eine Schleife.
 
-![For-Schleife_und_If-Abfrage](For_Schleife_Frage_1.png)
+![For-Schleife_und_If-Abfrage](/screenshots/For_Schleife_Frage_1.png)
 
 # Sie können die Syntax und Semantik von Python (10)
 Worauf ich stolz bin ist die Tastatur-GUI.
@@ -46,7 +46,7 @@ Durch die For-Schleife und ascii_uppercase wurde eine Tastatur mit Buttons gebau
 Wenn ein Button ausgewählt wird, wird eine Funktion ausgeführt, die den Buchstaben im gesuchten Wort prüft.
 Durch den Button "Neues Spiel" wird die Funktion "new-Game" ausgeführt und das Spiel wird mit einem neuen Wort gestartet.
 
-![Tastatur+Button](Buttons_Frage_1.png)
+![Tastatur+Button](/screenshots/Buttons_Frage_1.png)
 
 
 # Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
@@ -60,7 +60,7 @@ Da jeder an seinem eigenen Teil-Projekt arbeiten konnte, ohne jemand anderen zu 
 Trotzdem haben wir wenn wir uns besprochen haben oder Probleme hatten unseren aktuellen Stand auf Git gepusht.
 Im folgedem sieht man ein Ausschnitt aus GIT:
 
-![GIT_Commits](GIT_Commits_Frage_1.png)
+![GIT_Commits](/screenshots/GIT_Commits_Frage_1.png)
 
 
 # Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
@@ -108,11 +108,11 @@ It was the first time using git for all of us. At the beginning it took some tim
 https://github.com/LuisDuechtel/Minispielsammlung
 <!-- VSC -->
 I've used other IDEs like Eclipse before, but VS really convinced me to continue using it. VS Code is way easyer to handle and I quite like the minimalistic and simple design. You're always just seeing the windows and informations you want to see, nothing of the unnecessary stuff.
-![alt text](vs_code.png)
+![alt text](/screenshots/vs_code.png)
 <!-- Copilot -->
 We got some problems with the registration process for the GitHub Copilot...But we found another really good AI for coding. 
 It's called tabnine, and the way how it works is pretty much the same. You got a very percise auto completion, which helps a lot in repetitive things. For example, when coding all the different winning combinations for TicTacToe you start tipping the first 2 and get the rest suggested. That's a huge advantage, because the code is kind of redundant but you would need to change the list indixes all the time. This step is completely done by the ai. You just check in the end if everything's working and correct. This saves a lot of time, when writing many lines of code.
-![alt text](tabnine_ai.png)
+![alt text](/screenshots/tabnine_ai.png)
 <!-- other -->
 ChatGPT
 We used ChatGPT for getting information about how to write better and more effective code. For example, we asked chat when we had our code on how to push the performance and make it more efficient. Also ChatGPT's really good for asking about, how to implement a certain functionality or how to properly use Tkinter. (chat is quite helpful for Tkinter, but we still despaired sometimes...) :D
@@ -123,7 +123,9 @@ We used ChatGPT for getting information about how to write better and more effec
 # Die Studierenden können ihre Software erläutern und begründen. (5)
 <!-- Jeder in der Gruppe: You have helped someone else and taught something to a fellow student (get a support message from one person) -->
 Our main goal was to work close together in our team, so we solved most of the problems while our Discord coding-sessions. But we had some problems where we weren't able to solve in our group or nobody was available so we had a good exchange with other groups aswell. Was interesting to see what kinds of problems and challenges other teams are facing during der projects.
-![alt text](support_message.png)
+![alt text](/screenshots/support_message.png)
+
+![Philipp_Support_Message](/screenshots/Philipp_Support_Message.png)
 
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
